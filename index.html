@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hot Restaurant</title>
 </head>
+
 <body>
     <h1>Home Page</h1>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        const table = {
+            customerName: 'Will',
+            phoneNumber: '123-123-1233',
+            customerEmail: 'hello@gmail.com',
+            customerID: 'idk'
+        }
+
+        $.post('/api/tables', table, (response, data, something) => {
+            console.log(response);
+            console.log(data);
+            console.log(something);
+        })
+        // $.ajax({
+        //     method: 'POST',
+        //     url: '/api/tables',
+        //     data: {
+        //         table: {
+        //             customerName: 'Will',
+        //             phoneNumber: '123-123-1233',
+        //             customerEmail: 'hello@gmail.com',
+        //             customerID: 'idk'
+        //         }
+        //     },
+        //     success: (data, data1) => {
+        //         console.log(
+        //             `
+        //         data: ${data}
+        //         data1: ${data1}
+        //         `)
+        //     }
+        // })
+    </script>
 </body>
+
 </html>
