@@ -21,10 +21,8 @@
             customerID: 'idk'
         }
 
-        $.post('/api/tables', table, (response, data, something) => {
+        $.post('/api/tables', table, (response) => {
             console.log(response);
-            console.log(data);
-            console.log(something);
         })
         // $.ajax({
         //     method: 'POST',

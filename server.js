@@ -58,11 +58,11 @@ app.post('/api/tables', (req, res) => {
 
     if (tables.length < tableLimit) {
         tables = tables.concat(newTable);
-        res.send('Reservation accepted');
+        res.send(true);
     }
     else {
         waitlist = waitlist.concat(newTable);
-        res.send('Reservations full. Added to waiting list');
+        res.send(false);
     }
 
 })
